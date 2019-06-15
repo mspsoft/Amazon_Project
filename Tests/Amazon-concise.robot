@@ -4,6 +4,8 @@ Documentation  These test cases use a 2nd level keyword to wrap up multiple 1st 
 Resource  ../Resources/Common.robot  # necessary for Setup & Teardown
 Resource  ../Resources/AmazonApp.robot  # necessary for lower level keywords in test cases
 Resource  ../Resources/PO/Keywords/Amazon.robot
+Resource  ../TestSuite/Mobile/FirstRobotFile.robot
+Suite Setup  Set Library Search Order  Selenium2Library  AppiumLibrary
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
@@ -26,6 +28,8 @@ Search a Dell Laptop
     Select Product
     Add To Cart1
     Logout from Application
+    Open Android app
+
 
 #Logged out user can view a product
 #    [Tags]  Smoke

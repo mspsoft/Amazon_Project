@@ -1,5 +1,5 @@
 *** Settings ***
-Library  Selenium2Library
+Library  Selenium2Library  run_on_failure=Selenium2Library.CapturePageScreenshot
 
 *** Variables ***
 
