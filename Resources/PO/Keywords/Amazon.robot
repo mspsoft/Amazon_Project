@@ -37,7 +37,7 @@ Login Into Amazon
     #click on login ${loginbutton}
     Click Element  ${LoginButton_loc}
     Capture Page Screenshot
-    sleep  10s
+    sleep  5s
 
 
 Verify Login Successful
@@ -53,6 +53,8 @@ Search Amazon
     log to console  search amazon
 Select Product
     Click Element  ${Product1_Loc}
+    sleep  5s
+    Select Window  NEW
     Capture Page Screenshot
     log to console  select product
 Add To Cart1
@@ -61,5 +63,6 @@ Add To Cart1
     log to console  add to cart
 
 Logout from Application
+    Mouse Over  ${SignSuccessText_Loc}
     Click Element  ${logout_loc}
     log to console  logout
