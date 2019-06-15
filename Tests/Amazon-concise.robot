@@ -23,6 +23,9 @@ Search a Dell Laptop
     Login Into Amazon
     Verify Login Successful
     Search Amazon
+    Select Product
+    Add To Cart1
+    Logout from Application
 
 #Logged out user can view a product
 #    [Tags]  Smoke
