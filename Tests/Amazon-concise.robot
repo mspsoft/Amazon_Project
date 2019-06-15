@@ -23,7 +23,7 @@ Search a Dell Laptop
     Login Into Amazon
     Verify Login Successful
     Search Amazon
-    Select Product
+    Select Product  Dell 5480 AD/Backlit KB Clear Screen
     Add To Cart1
     Logout from Application
 
