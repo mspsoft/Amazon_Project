@@ -1,0 +1,30 @@
+{
+      "devices":[
+                            {
+                                  "device":"MotoG5",
+                                  "capabilities":{
+                                        "remoteUrl": "http://localhost:4723/wd/hub",
+                                        "automationName": "UiAutomator2",
+                                        "platformName": "Android",
+                                        "platformVersion": "7.1.1",
+                                        "deviceName": "",
+                                        "appPackage": "in.amazon.mShop.android.shopping",
+                                        "appActivity": "com.amazon.mShop.splashscreen.StartupActivity",
+                                        "appPath": "C:/Users/patilma/Downloads/Amazon Shopping_v18.11.0.100_apkpure.com.apk"
+                                  }
+                            },
+                            {
+                                  "device":"BlueStack",
+                                  "capabilities":{
+                                        "remoteUrl": "http://localhost:4723/wd/hub",
+                                        "automationName": "UiAutomator2",
+                                        "platformName": "Android",
+                                        "platformVersion": "",
+                                        "deviceName": "localhost:5555",
+                                        "appPackage": "in.amazon.mShop.android.shopping",
+                                        "appActivity": "com.amazon.mShop.splashscreen.StartupActivity",
+                                        "appPath": "C:/Users/patilma/Downloads/Amazon Shopping_v18.11.0.100_apkpure.com.apk"
+                                  }
+                            }
+                ]
+  }
