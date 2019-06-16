@@ -9,7 +9,7 @@ Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
 # Copy/paste the below command to Terminal to execute:
-# robot -d results/concise tests/amazon-concise.robot
+# Command - robot -d Results -A TestSuite/Mobile/Configuration/config.args Tests/Amazon-concise.robot
 
 *** Test Cases ***
 
@@ -22,7 +22,7 @@ Search a Dell Laptop
     Select Product  Dell 5480 AD/Backlit KB Clear Screen
     Add To Cart1
     Logout from Application
-    Open Android app
+    Verify on Mobile app
 
 
 

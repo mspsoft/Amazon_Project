@@ -19,19 +19,22 @@ ${emailID}  mspsoft@gmail.com
 ${password}  Autothon1
 
 *** Keywords ***
-Sign In
-    Wait Until Element Is Visible  ${btn_AlreadyACustomer}
-    click element  ${btn_AlreadyACustomer}
-    Wait Until Element Is Visible  ${radio_Login}
-    Element Should Contain Text  ${lbl_WelcomeMsg}  Welcome
-    click element  ${radio_Login}
-    Input Text  ${txtbx_LoginEmail}  ${emailID}
-    click element  ${btn_Continue}
-    Wait Until Element Is Visible  ${txtbx_LoginPassword}
-    Element Should Contain Text  ${lbl_LoginWelcomeMsg}  Login
+Sign In into mobile app
+    AppiumLibrary.Wait Until Element Is Visible  ${btn_AlreadyACustomer}
+    AppiumLibrary.capture page screenshot
+    AppiumLibrary.click element  ${btn_AlreadyACustomer}
+    AppiumLibrary.Wait Until Element Is Visible  ${radio_Login}
+    AppiumLibrary.Element Should Contain Text  ${lbl_WelcomeMsg}  Welcome
+    AppiumLibrary.capture page screenshot
+    AppiumLibrary.click element  ${radio_Login}
+    AppiumLibrary.Input Text  ${txtbx_LoginEmail}  ${emailID}
+    AppiumLibrary.click element  ${btn_Continue}
+    AppiumLibrary.Wait Until Element Is Visible  ${txtbx_LoginPassword}
+    AppiumLibrary.capture page screenshot
+    AppiumLibrary.Element Should Contain Text  ${lbl_LoginWelcomeMsg}  Login
 #    Element Should Contain Text  ${lbl_LoginEmail}  mspsoft@gmail.com
-    Input Password  ${txtbx_LoginPassword}  ${password}
-    click element  ${btn_Login}
+    AppiumLibrary.Input Password  ${txtbx_LoginPassword}  ${password}
+    AppiumLibrary.click element  ${btn_Login}
 
 Second keyword
     Do more
