@@ -52,7 +52,9 @@ Search Amazon
     Capture Page Screenshot
     log to console  search amazon
 Select Product
-    Click Element  ${Product1_Loc}
+    [Arguments]  ${Prod_Name}
+    ${str3} =   Catenate    SEPARATOR=  xpath=//*[@id="search"]//span[contains(text(),'   ${Prod_Name}  ')]
+    Click Element  ${str3}
     sleep  5s
     Select Window  NEW
     Capture Page Screenshot
@@ -66,3 +68,7 @@ Logout from Application
     Mouse Over  ${SignSuccessText_Loc}
     Click Element  ${logout_loc}
     log to console  logout
+
+Close Open Browser
+    Close Browser
+Remove fro Cart
