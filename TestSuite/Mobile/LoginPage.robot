@@ -1,19 +1,22 @@
 *** Variables ***
-${btn_AlreadyACustomer}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ViewAnimator/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[1]
-${btn_CreateAnAccount}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ViewAnimator/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]
-${btn_SkipSignIn}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ViewAnimator/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[3]
+${btn_AlreadyACustomer}  xpath=//android.widget.Button[@resource-id='in.amazon.mShop.android.shopping:id/sign_in_button']
+${btn_CreateAnAccount}  xpath=//android.widget.Button[@resource-id='in.amazon.mShop.android.shopping:id/new_user']
+${btn_SkipSignIn}  xpath=//android.widget.Button[@resource-id='in.amazon.mShop.android.shopping:id/skip_sign_in_button']
 
-${lbl_WelcomeMsg}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[2]/android.view.View[1]
-${radio_Login}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.RadioButton/android.view.View
-${radio_CreateAccount}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.RadioButton/android.view.View
-${txtbx_LoginEmail}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText
-${btn_Continue}  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.widget.Button
+${lbl_WelcomeMsg}  xpath=//android.view.View[@text='Welcome']
+${radio_Login}  xpath=//android.view.View[@resource-id='login_accordion_header']
+${radio_CreateAccount}  xpath=//android.view.View[@resource-id='register_accordion_header']
+${txtbx_LoginEmail}  xpath=//android.widget.EditText[@resource-id='ap_email_login']
+${btn_Continue}  xpath=//android.widget.Button[@resource-id='continue']
 
 ${lbl_LoginWelcomeMsg}  xpath=//android.view.View[@text='Login']
 #${lbl_LoginEmail}  xpath=//android.widget.Button[@resource-id='signInSubmit']
 #${lnk_Change}  xpath=//android.widget.Button[@resource-id='signInSubmit']
 ${txtbx_LoginPassword}  xpath=//android.widget.EditText[@resource-id='ap_password']
 ${btn_Login}  xpath=//android.widget.Button[@resource-id='signInSubmit']
+
+${emailID}  mspsoft@gmail.com
+${password}  Autothon1
 
 *** Keywords ***
 Sign In
@@ -22,12 +25,12 @@ Sign In
     Wait Until Element Is Visible  ${radio_Login}
     Element Should Contain Text  ${lbl_WelcomeMsg}  Welcome
     click element  ${radio_Login}
-    Input Text  ${txtbx_LoginEmail}  mspsoft@gmail.com
+    Input Text  ${txtbx_LoginEmail}  ${emailID}
     click element  ${btn_Continue}
     Wait Until Element Is Visible  ${txtbx_LoginPassword}
     Element Should Contain Text  ${lbl_LoginWelcomeMsg}  Login
 #    Element Should Contain Text  ${lbl_LoginEmail}  mspsoft@gmail.com
-    Input Password  ${txtbx_LoginPassword}  Autothon1
+    Input Password  ${txtbx_LoginPassword}  ${password}
     click element  ${btn_Login}
 
 Second keyword
