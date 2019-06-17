@@ -13,33 +13,33 @@ Test Teardown  End Web Test
 # Command - robot -d Results -A TestSuite/Mobile/Configuration/config.args Tests/Amazon-concise.robot
 
 *** Test Cases ***
-A User is able to add products in cart
-#    user is not logged in
- #   LandingPage.Load
- #Open the desired website to search
-    Access Amazon Application Using Google Search
-    User login into application with UserName and Password
-    Verify user has successfully logged into the application
-    Search for the desired product using ProductName
-    Select the desired product from the list  Dell 5480 AD/Backlit KB Clear Screen
-    Add the desired product into your shopping cart
-    Logout from Application
-    Close the Browser
-    #Verify on Mobile app
-
-#A User is able to Remove products from cart
+#A User is able to add products in cart
+##    user is not logged in
+# #   LandingPage.Load
+# #Open the desired website to search
 #    Access Amazon Application Using Google Search
 #    User login into application with UserName and Password
 #    Verify user has successfully logged into the application
 #    Search for the desired product using ProductName
 #    Select the desired product from the list  Dell 5480 AD/Backlit KB Clear Screen
 #    Add the desired product into your shopping cart
-#    Search for the New product using ProductName
-#    Select the desired product from the list  IKALL K2180 Dual Sim
-#    Add the desired product into your shopping cart
-#    #Open View Cart and Remove Product from Cart
 #    Logout from Application
 #    Close the Browser
+#    #Verify on Mobile app
+
+A User is able to add products in cart
+    Access Amazon Application Using Google Search
+    User login into application with UserName and Password
+    Verify user has successfully logged into the application
+    Search for the desired product using ProductName
+    Select the desired product from the list  Dell 5480 AD/Backlit KB Clear Screen
+    Add the desired product into your shopping cart
+    Search for the New product using ProductName
+    Select the desired product from the list  IKALL K2180 Dual Sim
+    Add the desired product into your shopping cart
+    #Open View Cart and Remove Product from Cart
+    Logout from Application
+    Close the Browser
 
 
 
