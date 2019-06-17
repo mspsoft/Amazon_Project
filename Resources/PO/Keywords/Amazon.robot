@@ -22,7 +22,7 @@ ${SearchText}  dell 5480 AD
 *** Keywords ***
 
 
-Login Into Amazon
+User login into application with UserName and Password
     #Click on sign in link
     Click Element  ${SingnInLink_loc}
     #Enter loginin username
@@ -40,18 +40,18 @@ Login Into Amazon
     sleep  5s
 
 
-Verify Login Successful
+Verify user has successfully logged into the application
     #Wait Until Page Contains  ${SignSuccessText_Loc}
     Element Should Contain  ${SignSuccessText_Loc}  ${SuccessTextMessage}
     Capture Page Screenshot
     log to console  Login successful
 
-Search Amazon
+Search for the desired product using ProductName
     Input Text  ${SearchText_Loc}  ${SearchText}
     Click Element  ${SearchGoButton_Loc}
     Capture Page Screenshot
     log to console  search amazon
-Select Product
+Select the desired product from the list
     [Arguments]  ${Prod_Name}
     ${str3} =   Catenate    SEPARATOR=  xpath=//*[@id="search"]//span[contains(text(),'   ${Prod_Name}  ')]
     Click Element  ${str3}
@@ -59,7 +59,7 @@ Select Product
     Select Window  NEW
     Capture Page Screenshot
     log to console  select product
-Add To Cart1
+Add the desired product into your shopping cart
     Click Element  ${AddToCart_Loc}
     Capture Page Screenshot
     log to console  add to cart
@@ -69,6 +69,3 @@ Logout from Application
     Click Element  ${logout_loc}
     log to console  logout
 
-Close Open Browser
-    Close Browser
-Remove fro Cart
