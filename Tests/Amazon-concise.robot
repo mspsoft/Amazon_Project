@@ -3,11 +3,14 @@ Documentation  These test cases use a 2nd level keyword to wrap up multiple 1st 
 Resource  ../Resources/PO/Keywords/Common.robot  # necessary for Setup & Teardown
 Resource  ../Resources/AmazonApp.robot  # necessary for lower level keywords in test cases
 Resource  ../Resources/PO/Keywords/Amazon.robot
+Resource  ../TestSuite/Mobile/FirstRobotFile.robot
+Suite Setup  Set Library Search Order  Selenium2Library  AppiumLibrary
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
 # Copy/paste the below command to Terminal to execute:
 # robot -d results/concise tests/amazon-concise.robot
+# Command - robot -d Results -A TestSuite/Mobile/Configuration/config.args Tests/Amazon-concise.robot
 
 *** Test Cases ***
 
@@ -22,7 +25,7 @@ A User is able to add products in cart
     Add the desired product into your shopping cart
     Logout from Application
     Close the Browser
-
+    Verify on Mobile app
 
 
 
