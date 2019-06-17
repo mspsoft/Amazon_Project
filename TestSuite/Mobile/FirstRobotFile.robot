@@ -12,8 +12,8 @@ Resource  ../Keywords/CommonKeyword.robot
 #${APP_ANDROID}    C:/Users/patilma/Downloads/Amazon Shopping_v18.11.0.100_apkpure.com.apk
 #${AUTOMATION_NAME}    UiAutomator2
 
-*** Test Cases ***
-#*** Keywords ***
+#*** Test Cases ***
+*** Keywords ***
 Verify on mobile app
     Open mobile app
     Sign In into mobile app

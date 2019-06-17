@@ -32,8 +32,8 @@ Sign In into mobile app
     AppiumLibrary.Wait Until Element Is Visible  ${txtbx_LoginPassword}
     AppiumLibrary.capture page screenshot
     AppiumLibrary.Element Should Contain Text  ${lbl_LoginWelcomeMsg}  Login
-    Input Password  ${txtbx_LoginPassword}  ${password}
-    click element  ${btn_Login}
+    AppiumLibrary.Input Password  ${txtbx_LoginPassword}  ${password}
+    AppiumLibrary.click element  ${btn_Login}
     AppiumLibrary.Input Password  ${txtbx_LoginPassword}  ${password}
     AppiumLibrary.click element  ${btn_Login}
 
