@@ -36,6 +36,8 @@ Sign In into mobile app
     AppiumLibrary.click element  ${btn_Login}
     AppiumLibrary.Input Password  ${txtbx_LoginPassword}  ${password}
     AppiumLibrary.click element  ${btn_Login}
+    log  Signed In and verified the product.  console=true
+    #sleep 10s
 
 Verify Login page
 

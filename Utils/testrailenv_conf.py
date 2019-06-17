@@ -6,5 +6,5 @@
 
 testrail_url = "sanjeevsinghverma@gmail.com"
 testrail_user = "password~1234"
-Source_Folder = "C:\Autothon"
-File_Folder = "results/concise/"
+Source_Folder = "C:/Users/Administrator/PycharmProjects/Amazon1/"
+File_Folder = "Results/"

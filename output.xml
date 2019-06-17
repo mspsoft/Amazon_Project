@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190617 12:29:31.495" rpa="false">
+<suite id="s1" name="TestSuite" source="C:\Users\Administrator\PycharmProjects\Amazon_ProjectNew\TestSuite">
+<suite id="s1-s1" name="Mobile" source="C:\Users\Administrator\PycharmProjects\Amazon_ProjectNew\TestSuite\Mobile">
+<suite id="s1-s1-s1" name="FirstRobotFile" source="C:\Users\Administrator\PycharmProjects\Amazon_ProjectNew\TestSuite\Mobile\FirstRobotFile.robot">
+<test id="s1-s1-s1-t1" name="Verify on mobile app">
+<kw name="Open mobile app" library="CommonKeyword">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>DeviceCapabilities</arg>
+</arguments>
+<assign>
+<var>${devCap}</var>
+</assign>
+<msg timestamp="20190617 12:29:32.044" level="INFO">${devCap} = &lt;DeviceCapabilities.DeviceCapabilities object at 0x041E8090&gt;</msg>
+<status status="PASS" starttime="20190617 12:29:32.044" endtime="20190617 12:29:32.044"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${devCap.remoteUrl}</arg>
+<arg>platformName=${devCap.platformName}</arg>
+<arg>platformVersion=${devCap.platformVersion}</arg>
+<arg>deviceName=${devCap.deviceName}</arg>
+<arg>automationName=${devCap.automationName}</arg>
+<arg>appPackage=${devCap.appPackage}</arg>
+<arg>appActivity=${devCap.appActivity}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190617 12:29:34.528" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20190617 12:29:34.528" endtime="20190617 12:29:34.528"></status>
+</kw>
+<msg timestamp="20190617 12:29:34.544" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20190617 12:29:34.547" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find 'adb.exe' in PATH. Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+</msg>
+<status status="FAIL" starttime="20190617 12:29:32.044" endtime="20190617 12:29:34.547"></status>
+</kw>
+<status status="FAIL" starttime="20190617 12:29:32.044" endtime="20190617 12:29:34.547"></status>
+</kw>
+<status status="FAIL" starttime="20190617 12:29:32.042" endtime="20190617 12:29:34.547" critical="yes">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find 'adb.exe' in PATH. Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+</status>
+</test>
+<status status="FAIL" starttime="20190617 12:29:31.525" endtime="20190617 12:29:34.547"></status>
+</suite>
+<status status="FAIL" starttime="20190617 12:29:31.525" endtime="20190617 12:29:34.547"></status>
+</suite>
+<status status="FAIL" starttime="20190617 12:29:31.495" endtime="20190617 12:29:34.547"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="TestSuite">TestSuite</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Mobile">TestSuite.Mobile</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="FirstRobotFile">TestSuite.Mobile.FirstRobotFile</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190617 12:29:34.544" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

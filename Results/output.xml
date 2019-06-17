@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190617 14:53:23.769" rpa="false">
+<suite id="s1" name="Amazon-concise - Copy" source="C:\Users\Administrator\PycharmProjects\Amazon1\Tests\Amazon-concise - Copy.robot">
+<kw name="Set Library Search Order" library="BuiltIn" type="setup">
+<doc>Sets the resolution order to use when a name matches multiple keywords.</doc>
+<arguments>
+<arg>Selenium2Library</arg>
+<arg>AppiumLibrary</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:53:24.378" endtime="20190617 14:53:24.378"></status>
+</kw>
+<test id="s1-t1" name="A User is able to add products in cart">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190617 14:53:24.378" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190617 14:53:24.378" endtime="20190617 14:53:42.472"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:53:24.378" endtime="20190617 14:53:42.472"></status>
+</kw>
+<kw name="Access Amazon Application Using Google Search" library="Common">
+<kw name="Enter Amazon Text into Google Search bar" library="Common">
+<kw name="Open Google" library="Common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+</arguments>
+<msg timestamp="20190617 14:53:42.474" level="INFO">Opening url 'https://www.google.com/'</msg>
+<status status="PASS" starttime="20190617 14:53:42.474" endtime="20190617 14:53:44.341"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190617 14:53:44.342" endtime="20190617 14:53:45.474"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:53:42.473" endtime="20190617 14:53:45.474"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${GoogleSearchLoc}</arg>
+<arg>${AmazonText}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:45.475" level="INFO">Typing text 'Amazon' into text field 'css=#tsf &gt; div:nth-child(2) &gt; div &gt; div.RNNXgb &gt; div &gt; div.a4bIc &gt; input'.</msg>
+<status status="PASS" starttime="20190617 14:53:45.475" endtime="20190617 14:53:45.584"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchBtn}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:45.585" level="INFO">Clicking element 'css=#tsf &gt; div:nth-child(2) &gt; div &gt; div.FPdoLc.VlcLAe &gt; center &gt; input.gNO89b'.</msg>
+<status status="PASS" starttime="20190617 14:53:45.585" endtime="20190617 14:53:47.131"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${AmazonURl}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:47.132" level="INFO">Clicking element 'css=#vn1s0p1c0 &gt; h3'.</msg>
+<status status="PASS" starttime="20190617 14:53:47.131" endtime="20190617 14:53:50.420"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190617 14:53:50.421" endtime="20190617 14:53:50.460"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:53:42.473" endtime="20190617 14:53:50.460"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:53:42.472" endtime="20190617 14:53:50.460"></status>
+</kw>
+<kw name="User login into application with UserName and Password" library="Common">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SingnInLink_loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:50.461" level="INFO">Clicking element 'xpath=//*[@id="nav-link-accountList"]/span[1]'.</msg>
+<status status="PASS" starttime="20190617 14:53:50.461" endtime="20190617 14:53:51.531"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:53:51.531" endtime="20190617 14:53:51.577"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:51.577" level="INFO">Typing text 'mspsoft@gmail.com' into text field 'xpath=//*[@id="ap_email"]'.</msg>
+<status status="PASS" starttime="20190617 14:53:51.577" endtime="20190617 14:53:51.716"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>${LoginContinueButton_Loc}</arg>
+</arguments>
+<assign>
+<var>${cont_status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${LoginContinueButton_Loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:51.742" level="INFO">Element 'xpath=//*[@id="continue"]' is displayed.</msg>
+<status status="PASS" starttime="20190617 14:53:51.717" endtime="20190617 14:53:51.742"></status>
+</kw>
+<msg timestamp="20190617 14:53:51.743" level="INFO">${cont_status} = True</msg>
+<status status="PASS" starttime="20190617 14:53:51.716" endtime="20190617 14:53:51.743"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${cont_status}' == 'True'</arg>
+<arg>Click Button</arg>
+<arg>${LoginContinueButton_Loc}</arg>
+<arg>ELSE</arg>
+<arg>LOG</arg>
+<arg>"continue button did not appear"</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginContinueButton_Loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:51.744" level="INFO">Clicking button 'xpath=//*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20190617 14:53:51.743" endtime="20190617 14:53:53.029"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:53:51.743" endtime="20190617 14:53:53.029"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_Loc}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:53.030" level="INFO">Typing text 'Autothon1' into text field 'xpath=//*[@id="ap_password"]'.</msg>
+<status status="PASS" starttime="20190617 14:53:53.029" endtime="20190617 14:53:53.129"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginButton_loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:53:53.129" level="INFO">Clicking element 'css=#signInSubmit'.</msg>
+<status status="PASS" starttime="20190617 14:53:53.129" endtime="20190617 14:53:56.871"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190617 14:53:57.748" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:53:56.871" endtime="20190617 14:53:57.749"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190617 14:54:02.750" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190617 14:53:57.749" endtime="20190617 14:54:02.750"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:53:50.460" endtime="20190617 14:54:02.750"></status>
+</kw>
+<kw name="Verify user has successfully logged into the application" library="Common">
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${SignSuccessText_Loc}</arg>
+<arg>${SuccessTextMessage}</arg>
+</arguments>
+<msg timestamp="20190617 14:54:02.805" level="INFO">Element 'xpath=//*[@id="nav-link-accountList"]/span[1]' contains text 'Hello,'.</msg>
+<status status="PASS" starttime="20190617 14:54:02.752" endtime="20190617 14:54:02.805"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190617 14:54:03.283" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:54:02.806" endtime="20190617 14:54:03.283"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Login successful</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:03.283" endtime="20190617 14:54:03.283"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:02.751" endtime="20190617 14:54:03.283"></status>
+</kw>
+<kw name="Search for the desired product using ProductName" library="Common">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchText_Loc}</arg>
+<arg>${SearchText}</arg>
+</arguments>
+<msg timestamp="20190617 14:54:03.283" level="INFO">Typing text 'dell 5480 AD' into text field 'xpath=//*[@id="twotabsearchtextbox"]'.</msg>
+<status status="PASS" starttime="20190617 14:54:03.283" endtime="20190617 14:54:03.420"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchGoButton_Loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:54:03.421" level="INFO">Clicking element 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20190617 14:54:03.420" endtime="20190617 14:54:05.777"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190617 14:54:06.323" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:54:05.777" endtime="20190617 14:54:06.323"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>search amazon</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:06.324" endtime="20190617 14:54:06.324"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:03.283" endtime="20190617 14:54:06.324"></status>
+</kw>
+<kw name="Select the desired product from the list" library="Common">
+<arguments>
+<arg>Dell 5480 AD/Backlit KB Clear Screen</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190617 14:54:11.326" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190617 14:54:06.325" endtime="20190617 14:54:11.326"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>xpath=//*[@id="search"]//a/span[contains(text(),'</arg>
+<arg>${Prod_Name}</arg>
+<arg>')]</arg>
+</arguments>
+<assign>
+<var>${str3}</var>
+</assign>
+<msg timestamp="20190617 14:54:11.327" level="INFO">${str3} = xpath=//*[@id="search"]//a/span[contains(text(),'Dell 5480 AD/Backlit KB Clear Screen')]</msg>
+<status status="PASS" starttime="20190617 14:54:11.327" endtime="20190617 14:54:11.327"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${str3}</arg>
+</arguments>
+<msg timestamp="20190617 14:54:11.328" level="INFO">Clicking element 'xpath=//*[@id="search"]//a/span[contains(text(),'Dell 5480 AD/Backlit KB Clear Screen')]'.</msg>
+<status status="PASS" starttime="20190617 14:54:11.328" endtime="20190617 14:54:11.455"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190617 14:54:16.457" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190617 14:54:11.456" endtime="20190617 14:54:16.457"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:16.458" endtime="20190617 14:54:16.479"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190617 14:54:17.953" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:54:16.479" endtime="20190617 14:54:17.953"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>select product</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:17.953" endtime="20190617 14:54:17.954"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:06.324" endtime="20190617 14:54:17.954"></status>
+</kw>
+<kw name="Add the desired product into your shopping cart" library="Common">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${AddToCart_Loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:54:17.955" level="INFO">Clicking element 'xpath =//*[@id="add-to-cart-button"]'.</msg>
+<status status="PASS" starttime="20190617 14:54:17.954" endtime="20190617 14:54:20.843"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190617 14:54:21.280" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:54:20.844" endtime="20190617 14:54:21.280"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>add to cart</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:21.281" endtime="20190617 14:54:21.281"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:17.954" endtime="20190617 14:54:21.281"></status>
+</kw>
+<kw name="Logout from Application" library="Common">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${SignSuccessText_Loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:54:21.282" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="nav-link-accountList"]/span[1]'.</msg>
+<status status="PASS" starttime="20190617 14:54:21.282" endtime="20190617 14:54:21.320"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190617 14:54:26.322" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190617 14:54:21.320" endtime="20190617 14:54:26.322"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${logout_loc}</arg>
+</arguments>
+<msg timestamp="20190617 14:54:26.322" level="INFO">Clicking element 'xpath=//*[@id="nav-item-signout"]/span'.</msg>
+<status status="PASS" starttime="20190617 14:54:26.322" endtime="20190617 14:54:27.424"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>logout</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:27.424" endtime="20190617 14:54:27.425"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:21.281" endtime="20190617 14:54:27.425"></status>
+</kw>
+<kw name="Close the Browser" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190617 14:54:27.426" endtime="20190617 14:54:29.702"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:27.425" endtime="20190617 14:54:29.703"></status>
+</kw>
+<kw name="Verify on mobile app" library="FirstRobotFile">
+<kw name="Open mobile app" library="CommonKeyword">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>DeviceCapabilities</arg>
+</arguments>
+<assign>
+<var>${devCap}</var>
+</assign>
+<msg timestamp="20190617 14:54:29.705" level="INFO">${devCap} = &lt;DeviceCapabilities.DeviceCapabilities object at 0x04979250&gt;</msg>
+<status status="PASS" starttime="20190617 14:54:29.704" endtime="20190617 14:54:29.705"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${devCap.remoteUrl}</arg>
+<arg>platformName=${devCap.platformName}</arg>
+<arg>platformVersion=${devCap.platformVersion}</arg>
+<arg>deviceName=${devCap.deviceName}</arg>
+<arg>automationName=${devCap.automationName}</arg>
+<arg>appPackage=${devCap.appPackage}</arg>
+<arg>appActivity=${devCap.appActivity}</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:29.705" endtime="20190617 14:54:59.239"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:29.704" endtime="20190617 14:54:59.240"></status>
+</kw>
+<kw name="Sign In into mobile app" library="LoginPage">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${btn_AlreadyACustomer}</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:54:59.240" endtime="20190617 14:55:01.645"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190617 14:55:02.387" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:55:01.645" endtime="20190617 14:55:02.388"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_AlreadyACustomer}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:02.391" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='in.amazon.mShop.android.shopping:id/sign_in_button']'.</msg>
+<status status="PASS" starttime="20190617 14:55:02.388" endtime="20190617 14:55:02.532"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${radio_Login}</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:55:02.532" endtime="20190617 14:55:06.255"></status>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${lbl_WelcomeMsg}</arg>
+<arg>Welcome</arg>
+</arguments>
+<msg timestamp="20190617 14:55:06.258" level="INFO">Verifying element 'xpath=//android.view.View[@text='Welcome']' contains text 'Welcome'.</msg>
+<status status="PASS" starttime="20190617 14:55:06.255" endtime="20190617 14:55:07.447"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190617 14:55:08.210" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:55:07.447" endtime="20190617 14:55:08.210"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${radio_Login}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:08.213" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id='login_accordion_header']'.</msg>
+<status status="PASS" starttime="20190617 14:55:08.210" endtime="20190617 14:55:08.510"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txtbx_LoginEmail}</arg>
+<arg>${emailID}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:08.514" level="INFO">Typing text 'mspsoft@gmail.com' into text field 'xpath=//android.widget.EditText[@resource-id='ap_email_login']'</msg>
+<status status="PASS" starttime="20190617 14:55:08.511" endtime="20190617 14:55:09.268"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Continue}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:09.271" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='continue']'.</msg>
+<status status="PASS" starttime="20190617 14:55:09.269" endtime="20190617 14:55:09.990"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${txtbx_LoginPassword}</arg>
+</arguments>
+<status status="PASS" starttime="20190617 14:55:09.990" endtime="20190617 14:55:12.712"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190617 14:55:13.526" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190617 14:55:12.713" endtime="20190617 14:55:13.526"></status>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${lbl_LoginWelcomeMsg}</arg>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20190617 14:55:13.529" level="INFO">Verifying element 'xpath=//android.view.View[@text='Login']' contains text 'Login'.</msg>
+<status status="PASS" starttime="20190617 14:55:13.527" endtime="20190617 14:55:13.858"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txtbx_LoginPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:13.861" level="INFO">Typing password into text field 'xpath=//android.widget.EditText[@resource-id='ap_password']'</msg>
+<status status="PASS" starttime="20190617 14:55:13.858" endtime="20190617 14:55:14.210"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Login}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:14.214" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='signInSubmit']'.</msg>
+<status status="PASS" starttime="20190617 14:55:14.211" endtime="20190617 14:55:15.006"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txtbx_LoginPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:15.009" level="INFO">Typing password into text field 'xpath=//android.widget.EditText[@resource-id='ap_password']'</msg>
+<status status="PASS" starttime="20190617 14:55:15.006" endtime="20190617 14:55:15.302"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Login}</arg>
+</arguments>
+<msg timestamp="20190617 14:55:15.305" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='signInSubmit']'.</msg>
+<status status="PASS" starttime="20190617 14:55:15.303" endtime="20190617 14:55:15.894"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Signed In and verified the product.</arg>
+<arg>console=true</arg>
+</arguments>
+<msg timestamp="20190617 14:55:15.895" level="INFO">Signed In and verified the product.</msg>
+<status status="PASS" starttime="20190617 14:55:15.894" endtime="20190617 14:55:15.895"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:59.240" endtime="20190617 14:55:15.895"></status>
+</kw>
+<kw name="Close All Applications" library="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20190617 14:55:15.895" endtime="20190617 14:55:17.722"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:54:29.703" endtime="20190617 14:55:17.723"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190617 14:55:17.723" endtime="20190617 14:55:17.724"></status>
+</kw>
+<status status="PASS" starttime="20190617 14:55:17.723" endtime="20190617 14:55:17.724"></status>
+</kw>
+<doc>TestCaseID: T[34243234]
+Description: Search Amazon on Google, Open website, search product, add to cart and verify on mobile</doc>
+<status status="PASS" starttime="20190617 14:53:24.378" endtime="20190617 14:55:17.724" critical="yes"></status>
+</test>
+<doc>These test cases use a 2nd level keyword to wrap up multiple 1st level keywords for brevity</doc>
+<status status="PASS" starttime="20190617 14:53:23.772" endtime="20190617 14:55:17.725"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Amazon-concise - Copy">Amazon-concise - Copy</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190617 14:53:24.103" level="ERROR">Error in file 'C:\Users\Administrator\PycharmProjects\Amazon1\Resources\PO\Keywords\Amazon.robot': Resource file '..\Resources\PO\Keywords\Common.robot' does not exist.</msg>
+</errors>
+</robot>

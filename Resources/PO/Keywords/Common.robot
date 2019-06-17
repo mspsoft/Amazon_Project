@@ -104,6 +104,7 @@ Add the desired product into your shopping cart
 
 Logout from Application
     Mouse Over  ${SignSuccessText_Loc}
+    sleep  5s
     Click Element  ${logout_loc}
     log to console  logout
 

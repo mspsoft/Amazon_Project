@@ -3,7 +3,7 @@ import os
 import inspect
 from robot.api import logger
 from robot.libraries.BuiltIn import BuiltIn
-debug = True
+debug = False
 
 class DeviceCapabilities:
 
